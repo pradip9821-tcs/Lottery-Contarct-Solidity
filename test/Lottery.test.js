@@ -51,21 +51,13 @@ describe(
                     await lottery.methods.Enter().send(
                         {
                             from    : accounts[0],
-                            value   : web3.utils
-                                        .toWei(
-                                            '0.011', 
-                                            'ether'
-                                        )
+                            value   : web3.utils.toWei( '0.011',  'ether' )
                         }
                     );
-                    assert(
-                        false
-                    );
+                    assert(false) ;
                 } 
                 catch (error) {
-                    assert(
-                        error
-                    );
+                    assert(error) ;
                 }
             }
         );
@@ -80,13 +72,9 @@ describe(
                             value   : 0
                         }
                     );
-                    assert(
-                        false
-                    );
+                    assert(false) ;
                 } catch (error) {
-                    assert(
-                        error
-                    );
+                    assert(error) ;
                 } 
             }
         );
@@ -97,21 +85,13 @@ describe(
                 await lottery.methods.Enter().send(
                     {
                         from    : accounts[1],
-                        value   : web3.utils
-                                    .toWei(
-                                        '0.011', 
-                                        'ether'
-                                    )
+                        value   : web3.utils.toWei( '0.011',  'ether' )
                     }
                 );
                 await lottery.methods.Enter().send(
                     {
                         from    : accounts[2],
-                        value   : web3.utils
-                                    .toWei(
-                                        '0.011', 
-                                        'ether'
-                                    )
+                        value   : web3.utils.toWei( '0.011',  'ether' )
                     }
                 );
         
@@ -147,14 +127,10 @@ describe(
                             from    : accounts[1] 
                         }
                     );
-                    assert(
-                        false
-                    );
+                    assert(false) ;
                 } 
                 catch (error) {
-                    assert(
-                        error
-                    );
+                    assert(error) ;
                 }
             }
         );
