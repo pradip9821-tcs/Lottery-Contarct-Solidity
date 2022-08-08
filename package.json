@@ -1,19 +1,31 @@
 {
-  "name": "lottery",
-  "version": "1.0.0",
+  "name": "lottery-contract",
+  "version": "0.83.9",
   "description": "",
-  "main": "index.js",
+  "main": "compile.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "deploy": "node deploy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pradip9821-tcs/Lottery-Contarct-Solidity.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pradip9821-tcs/Lottery-Contarct-Solidity/issues"
+  },
+  "homepage": "https://github.com/pradip9821-tcs/Lottery-Contarct-Solidity#readme",
   "dependencies": {
-    "@truffle/hdwallet-provider": "^1.5.1",
+    "@truffle/hdwallet-provider": "^2.0.13",
     "dotenv": "^16.0.1",
     "ganache-cli": "^6.12.2",
-    "mocha": "^9.1.2",
-    "solc": "^0.4.17",
-    "web3": "^1.6.0"
+    "mocha": "^10.0.0",
+    "solc": "^0.8.9",
+    "web3": "^1.7.5"
   }
 }

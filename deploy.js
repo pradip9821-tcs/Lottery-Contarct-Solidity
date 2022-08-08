@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const HDWalletProvider  = require('@truffle/hdwallet-provider');
-const { interface, bytecode }   = require('./compile');
+const { abi, evm }      = require('./compile');
 
 const Web3  = require('web3');
 
@@ -21,9 +21,9 @@ const deploy  = async () => {
     accounts[0]
   );
 
-  const result  = await new web3.eth.Contract(JSON.parse(interface))
+  const result  = await new web3.eth.Contract(abi)
     .deploy(
-      { data: bytecode }
+      { data: evm.bytecode.object }
     )
     .send(
       { 
@@ -32,10 +32,8 @@ const deploy  = async () => {
       }
     );
 
-  console.log(
-    'Contract deployed to', 
-    result.options.address
-  );
+  console.log('Contract Interface is ', JSON.stringify(abi));
+  console.log('Contract deployed to', result.options.address);
 
   provider.engine.stop();
 
